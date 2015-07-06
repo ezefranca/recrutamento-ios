@@ -18,6 +18,8 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    WebserviceTK* wbTK = [[WebserviceTK alloc]init];
+    [wbTK downloadShowsPopulares];
     // Do any additional setup after loading the view, typically from a nib.
     
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;

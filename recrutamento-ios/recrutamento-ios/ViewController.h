@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WebserviceTK.h"
 
 @interface ViewController : UIViewController  <UICollectionViewDataSource, UICollectionViewDelegate>
 
