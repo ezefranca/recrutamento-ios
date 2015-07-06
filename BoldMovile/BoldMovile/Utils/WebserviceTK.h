@@ -16,6 +16,7 @@
 
 @interface WebserviceTK : NSObject
 
-- (void) downloadShowsPopulares ;
+@property NSArray *reposta;
+- (NSArray *) downloadShowsPopulares;
 
 @end

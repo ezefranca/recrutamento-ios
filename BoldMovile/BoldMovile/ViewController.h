@@ -12,7 +12,7 @@
 @interface ViewController : UIViewController  <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collection;
-@property (retain, nonatomic) NSMutableArray *showsArray;
+@property  NSArray *showsArray;
 
 @end
 

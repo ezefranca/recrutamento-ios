@@ -106,6 +106,7 @@
 		A494495B1B4A162C006D6114 /* BoldMovile */ = {
 			isa = PBXGroup;
 			children = (
+				A494498D1B4A7CAC006D6114 /* View */,
 				A49449881B4A1B12006D6114 /* Utils */,
 				A49449821B4A1631006D6114 /* Swift */,
 				A49449601B4A162C006D6114 /* AppDelegate.h */,
@@ -149,7 +150,7 @@
 		A49449821B4A1631006D6114 /* Swift */ = {
 			isa = PBXGroup;
 			children = (
-				A49449851B4A1654006D6114 /* Shows.swift */,
+				A494498C1B4A7C93006D6114 /* Model */,
 				A49449831B4A1654006D6114 /* BoldMovile-Bridging-Header.h */,
 				A49449841B4A1654006D6114 /* BoldMovileTests-Bridging-Header.h */,
 			);
@@ -163,6 +164,21 @@
 				A494498A1B4A1B48006D6114 /* WebserviceTK.h */,
 			);
 			name = Utils;
+			sourceTree = "<group>";
+		};
+		A494498C1B4A7C93006D6114 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				A49449851B4A1654006D6114 /* Shows.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		A494498D1B4A7CAC006D6114 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = View;
 			sourceTree = "<group>";
 		};
 		BF89DA7D2FA03CC0D50F7888 /* Pods */ = {

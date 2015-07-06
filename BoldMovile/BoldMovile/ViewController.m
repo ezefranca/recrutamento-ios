@@ -14,22 +14,32 @@
 @end
 
 @implementation ViewController
-
+@synthesize showsArray;
 #pragma mark - Lifecycle Methods
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [[NSNotificationCenter defaultCenter] addObserver:self
+                                             selector:@selector(downloadCompleto:)
+                                                       name:@"DOWNLOADCOMPLETO" object:showsArray];
+
     WebserviceTK* wbTK = [[WebserviceTK alloc]init];
-    //[wbTK downloadShowsPopulares];
+    [wbTK downloadShowsPopulares];
     Shows *show = [[Shows alloc]init];
     show.nome = @"TESTE";
     show.ano = [NSNumber numberWithInt:1990];
     show.imagesURL = @"www";
-    
-    NSLog(@"%@", show);
+
     // Do any additional setup after loading the view, typically from a nib.
     
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;
+}
+
+- (void)downloadCompleto : (NSNotification *)notification{
+   // NSLog(@"AAA %@", notification.object);
+    showsArray = notification.object;
+   // NSLog(@"BBB %@", showsArray);
+    [_collection reloadData];
 }
 
 #pragma mark - Memory Management
@@ -39,10 +49,19 @@
     // Dispose of any resources that can be recreated.
 }
 
-
 #pragma mark - UICollectionView DataSource Methods
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    if (showsArray) {
+        for (NSDictionary *showsFilter in showsArray) {
+            
+            Shows *showTK = [[Shows alloc] init];
+            showTK.nome = [showsFilter objectForKey:@"title"];
+            showTK.imagesURL = [[[showsFilter objectForKey:@"images"] objectForKey:@"poster"] objectForKey:@"thumb"];
+            NSLog(@"CCC %@", showTK.nome);
+        }
+    }
     
     static NSString *cellIdentifier = @"cellIdentifier";
     
@@ -53,7 +72,11 @@
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
     
-    return 5;
+    if (showsArray) {
+        return showsArray.count;
+    }else {
+    return 9;
+    }
 }
 
 - (NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView {
