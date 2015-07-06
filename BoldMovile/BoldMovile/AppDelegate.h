@@ -7,6 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFNetworkActivityIndicatorManager.h"
+#import "Reachability.h"
+#import "JTAlertView.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 

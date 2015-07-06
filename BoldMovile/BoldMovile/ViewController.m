@@ -36,9 +36,23 @@
 }
 
 - (void)downloadCompleto : (NSNotification *)notification{
-   // NSLog(@"AAA %@", notification.object);
+   
     showsArray = notification.object;
-   // NSLog(@"BBB %@", showsArray);
+    
+    _showTemp = [[NSMutableArray alloc]init];
+    
+    if (showsArray) {
+        for (NSDictionary *showsFilter in showsArray) {
+            
+            self.showTK = [[Shows alloc] init];
+            _showTK.nome = [showsFilter objectForKey:@"title"];
+            _showTK.imagesURL = [[[showsFilter objectForKey:@"images"] objectForKey:@"poster"] objectForKey:@"thumb"];
+            _showTK.ano = [showsFilter objectForKey:@"year"];
+            [_showTemp addObject:self.showTK];
+            NSLog(@"CCC %@", _showTemp);
+        }
+    }
+
     [_collection reloadData];
 }
 
@@ -55,22 +69,44 @@
     
     static NSString *cellIdentifier = @"cellIdentifier";
     
-    if (showsArray) {
-        for (NSDictionary *showsFilter in showsArray) {
-            
-            self.showTK = [[Shows alloc] init];
-            _showTK.nome = [showsFilter objectForKey:@"title"];
-            _showTK.imagesURL = [[[showsFilter objectForKey:@"images"] objectForKey:@"poster"] objectForKey:@"thumb"];
-            NSLog(@"CCC %@", _showTK.nome);
-        }
+    if (_showTemp) {
+        
         TKCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
-        cell.showTitle.text = _showTK.nome;
+        Shows *temp = [_showTemp objectAtIndex:indexPath.row];
+        cell.showTitle.text = temp.nome;
+        [cell.showImage sd_setImageWithURL:[NSURL URLWithString:temp.imagesURL] placeholderImage:[UIImage imageNamed:@"placeholder"]];
+        
         return cell;
     }
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     
     return cell;
+}
+
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath {
+    
+    Shows *temp = [_showTemp objectAtIndex:indexPath.row];
+   
+    SDWebImageManager *manager = [SDWebImageManager sharedManager];
+    [manager downloadImageWithURL:[NSURL URLWithString:temp.imagesURL]
+                          options:0
+                         progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+                            
+                         }
+                        completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, BOOL finished, NSURL *imageURL) {
+                            if (image) {
+                                NSString* titulo = [NSString stringWithFormat:@"%@\n%@", temp.nome, temp.ano];
+                                JTAlertView *alertView = [[JTAlertView alloc] initWithTitle:titulo andImage:image];
+                                alertView.size = CGSizeMake(280, 230);
+                                [alertView addButtonWithTitle:@"OK" style:JTAlertViewStyleDefault action:^(JTAlertView *alertView) {
+                                    [alertView hide];
+                                }];
+                                
+                                [alertView show];
+                            }
+                        }];
+    
 }
 
 - (NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section {
