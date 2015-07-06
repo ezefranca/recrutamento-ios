@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "WebserviceTK.h"
 
-@interface ViewController : UIViewController
+@interface ViewController : UIViewController  <UICollectionViewDataSource, UICollectionViewDelegate>
 
+@property (weak, nonatomic) IBOutlet UICollectionView *collection;
+@property (retain, nonatomic) NSMutableArray *showsArray;
 
 @end
 

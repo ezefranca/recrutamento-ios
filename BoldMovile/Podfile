@@ -6,7 +6,6 @@ platform :ios, '8.0'
 
 link_with 'BoldMovile', 'BoldMovileTests'
 
-pod 'Mantle'
 pod 'AFNetworking'
 pod 'SDWebImage'
 pod 'JTAlertView'

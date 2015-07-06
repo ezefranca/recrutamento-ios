@@ -16,6 +16,9 @@
 		A49449791B4A162C006D6114 /* BoldMovileTests.m in Sources */ = {isa = PBXBuildFile; fileRef = A49449781B4A162C006D6114 /* BoldMovileTests.m */; };
 		A49449861B4A1654006D6114 /* Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49449851B4A1654006D6114 /* Shows.swift */; };
 		A49449871B4A1654006D6114 /* Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49449851B4A1654006D6114 /* Shows.swift */; };
+		A494498B1B4A1B48006D6114 /* WebserviceTK.m in Sources */ = {isa = PBXBuildFile; fileRef = A49449891B4A1B48006D6114 /* WebserviceTK.m */; };
+		C69377969B35A2608F521821 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D1351F57AD61EA6BA987D9 /* libPods.a */; };
+		CA7D5AE48E065BA6430DD631 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D1351F57AD61EA6BA987D9 /* libPods.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -29,6 +32,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		43D1351F57AD61EA6BA987D9 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		459B10A1FE8CFF0D064417D5 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		A49449591B4A162C006D6114 /* BoldMovile.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BoldMovile.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A494495D1B4A162C006D6114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A494495E1B4A162C006D6114 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -45,6 +50,9 @@
 		A49449831B4A1654006D6114 /* BoldMovile-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BoldMovile-Bridging-Header.h"; sourceTree = "<group>"; };
 		A49449841B4A1654006D6114 /* BoldMovileTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "BoldMovileTests-Bridging-Header.h"; sourceTree = "<group>"; };
 		A49449851B4A1654006D6114 /* Shows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shows.swift; sourceTree = "<group>"; };
+		A49449891B4A1B48006D6114 /* WebserviceTK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebserviceTK.m; path = Utils/WebserviceTK.m; sourceTree = "<group>"; };
+		A494498A1B4A1B48006D6114 /* WebserviceTK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebserviceTK.h; path = Utils/WebserviceTK.h; sourceTree = "<group>"; };
+		B8186B7ECF5BA56D5B4D650B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,6 +60,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C69377969B35A2608F521821 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -59,18 +68,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CA7D5AE48E065BA6430DD631 /* libPods.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		9ACF46ABE7D9739B911F2D5D /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				43D1351F57AD61EA6BA987D9 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		A49449501B4A162C006D6114 = {
 			isa = PBXGroup;
 			children = (
 				A494495B1B4A162C006D6114 /* BoldMovile */,
 				A49449751B4A162C006D6114 /* BoldMovileTests */,
 				A494495A1B4A162C006D6114 /* Products */,
+				BF89DA7D2FA03CC0D50F7888 /* Pods */,
+				9ACF46ABE7D9739B911F2D5D /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -86,6 +106,7 @@
 		A494495B1B4A162C006D6114 /* BoldMovile */ = {
 			isa = PBXGroup;
 			children = (
+				A49449881B4A1B12006D6114 /* Utils */,
 				A49449821B4A1631006D6114 /* Swift */,
 				A49449601B4A162C006D6114 /* AppDelegate.h */,
 				A49449611B4A162C006D6114 /* AppDelegate.m */,
@@ -135,6 +156,24 @@
 			name = Swift;
 			sourceTree = "<group>";
 		};
+		A49449881B4A1B12006D6114 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				A49449891B4A1B48006D6114 /* WebserviceTK.m */,
+				A494498A1B4A1B48006D6114 /* WebserviceTK.h */,
+			);
+			name = Utils;
+			sourceTree = "<group>";
+		};
+		BF89DA7D2FA03CC0D50F7888 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				459B10A1FE8CFF0D064417D5 /* Pods.debug.xcconfig */,
+				B8186B7ECF5BA56D5B4D650B /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -142,9 +181,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A494497C1B4A162C006D6114 /* Build configuration list for PBXNativeTarget "BoldMovile" */;
 			buildPhases = (
+				FE71D8BB35AFCDFD9885A375 /* Check Pods Manifest.lock */,
 				A49449551B4A162C006D6114 /* Sources */,
 				A49449561B4A162C006D6114 /* Frameworks */,
 				A49449571B4A162C006D6114 /* Resources */,
+				3EB6F157601ABC724AA99CBE /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -159,9 +200,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = A494497F1B4A162C006D6114 /* Build configuration list for PBXNativeTarget "BoldMovileTests" */;
 			buildPhases = (
+				3094F7253EE114007245DDB3 /* Check Pods Manifest.lock */,
 				A494496E1B4A162C006D6114 /* Sources */,
 				A494496F1B4A162C006D6114 /* Frameworks */,
 				A49449701B4A162C006D6114 /* Resources */,
+				FAC5B499923F8AAAA4AB71B9 /* Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +273,69 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3094F7253EE114007245DDB3 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		3EB6F157601ABC724AA99CBE /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FAC5B499923F8AAAA4AB71B9 /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FE71D8BB35AFCDFD9885A375 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		A49449551B4A162C006D6114 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -239,6 +345,7 @@
 				A49449621B4A162C006D6114 /* AppDelegate.m in Sources */,
 				A49449861B4A1654006D6114 /* Shows.swift in Sources */,
 				A494495F1B4A162C006D6114 /* main.m in Sources */,
+				A494498B1B4A1B48006D6114 /* WebserviceTK.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -365,6 +472,7 @@
 		};
 		A494497D1B4A162C006D6114 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 459B10A1FE8CFF0D064417D5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -379,6 +487,7 @@
 		};
 		A494497E1B4A162C006D6114 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8186B7ECF5BA56D5B4D650B /* Pods.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
@@ -392,6 +501,7 @@
 		};
 		A49449801B4A162C006D6114 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 459B10A1FE8CFF0D064417D5 /* Pods.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -414,6 +524,7 @@
 		};
 		A49449811B4A162C006D6114 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B8186B7ECF5BA56D5B4D650B /* Pods.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				CLANG_ENABLE_MODULES = YES;
@@ -448,6 +559,7 @@
 				A494497E1B4A162C006D6114 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		A494497F1B4A162C006D6114 /* Build configuration list for PBXNativeTarget "BoldMovileTests" */ = {
 			isa = XCConfigurationList;
@@ -456,6 +568,7 @@
 				A49449811B4A162C006D6114 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
