@@ -7,6 +7,7 @@
 //
 
 #import "ViewController.h"
+#import "recrutamentoios-Swift.h"
 
 @interface ViewController ()
 
@@ -19,7 +20,13 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     WebserviceTK* wbTK = [[WebserviceTK alloc]init];
-    [wbTK downloadShowsPopulares];
+    //[wbTK downloadShowsPopulares];
+    Shows *show = [[Shows alloc]init];
+    show.nome = @"TESTE";
+    show.ano = [NSNumber numberWithInt:1990];
+    show.imagensURL = @"www";
+    
+    NSLog(@"%@", show);
     // Do any additional setup after loading the view, typically from a nib.
     
     self.navigationController.navigationBar.barStyle = UIBarStyleBlack;

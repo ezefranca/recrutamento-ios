@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 #import <AFNetworking.h>
+#import "recrutamentoios-Swift.h"
 
 #define API_ENDPOINT @"https://api-v2launch.trakt.tv/shows/popular?extended=images"
 #define CLIENT_ID @"04ee94fc2290b14e148eb8ae3c369b6a18b4594bd07a69ae7eac13d830d8dc32"
