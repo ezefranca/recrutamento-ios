@@ -53,17 +53,20 @@
 
 - (UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath {
     
+    static NSString *cellIdentifier = @"cellIdentifier";
+    
     if (showsArray) {
         for (NSDictionary *showsFilter in showsArray) {
             
-            Shows *showTK = [[Shows alloc] init];
-            showTK.nome = [showsFilter objectForKey:@"title"];
-            showTK.imagesURL = [[[showsFilter objectForKey:@"images"] objectForKey:@"poster"] objectForKey:@"thumb"];
-            NSLog(@"CCC %@", showTK.nome);
+            self.showTK = [[Shows alloc] init];
+            _showTK.nome = [showsFilter objectForKey:@"title"];
+            _showTK.imagesURL = [[[showsFilter objectForKey:@"images"] objectForKey:@"poster"] objectForKey:@"thumb"];
+            NSLog(@"CCC %@", _showTK.nome);
         }
+        TKCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
+        cell.showTitle.text = _showTK.nome;
+        return cell;
     }
-    
-    static NSString *cellIdentifier = @"cellIdentifier";
     
     UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellIdentifier forIndexPath:indexPath];
     

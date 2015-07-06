@@ -8,11 +8,12 @@
 
 #import <UIKit/UIKit.h>
 #import "WebserviceTK.h"
+#import "TKCell.h"
 
 @interface ViewController : UIViewController  <UICollectionViewDataSource, UICollectionViewDelegate>
 
 @property (weak, nonatomic) IBOutlet UICollectionView *collection;
 @property  NSArray *showsArray;
-
+@property  Shows *showTK;
 @end
 

@@ -17,6 +17,7 @@
 		A49449861B4A1654006D6114 /* Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49449851B4A1654006D6114 /* Shows.swift */; };
 		A49449871B4A1654006D6114 /* Shows.swift in Sources */ = {isa = PBXBuildFile; fileRef = A49449851B4A1654006D6114 /* Shows.swift */; };
 		A494498B1B4A1B48006D6114 /* WebserviceTK.m in Sources */ = {isa = PBXBuildFile; fileRef = A49449891B4A1B48006D6114 /* WebserviceTK.m */; };
+		A49449901B4A7D01006D6114 /* TKCell.m in Sources */ = {isa = PBXBuildFile; fileRef = A494498F1B4A7D01006D6114 /* TKCell.m */; };
 		C69377969B35A2608F521821 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D1351F57AD61EA6BA987D9 /* libPods.a */; };
 		CA7D5AE48E065BA6430DD631 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 43D1351F57AD61EA6BA987D9 /* libPods.a */; };
 /* End PBXBuildFile section */
@@ -52,6 +53,8 @@
 		A49449851B4A1654006D6114 /* Shows.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Shows.swift; sourceTree = "<group>"; };
 		A49449891B4A1B48006D6114 /* WebserviceTK.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = WebserviceTK.m; path = Utils/WebserviceTK.m; sourceTree = "<group>"; };
 		A494498A1B4A1B48006D6114 /* WebserviceTK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = WebserviceTK.h; path = Utils/WebserviceTK.h; sourceTree = "<group>"; };
+		A494498E1B4A7D01006D6114 /* TKCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TKCell.h; path = View/TKCell.h; sourceTree = "<group>"; };
+		A494498F1B4A7D01006D6114 /* TKCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TKCell.m; path = View/TKCell.m; sourceTree = "<group>"; };
 		B8186B7ECF5BA56D5B4D650B /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -177,6 +180,8 @@
 		A494498D1B4A7CAC006D6114 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				A494498E1B4A7D01006D6114 /* TKCell.h */,
+				A494498F1B4A7D01006D6114 /* TKCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -359,6 +364,7 @@
 			files = (
 				A49449651B4A162C006D6114 /* ViewController.m in Sources */,
 				A49449621B4A162C006D6114 /* AppDelegate.m in Sources */,
+				A49449901B4A7D01006D6114 /* TKCell.m in Sources */,
 				A49449861B4A1654006D6114 /* Shows.swift in Sources */,
 				A494495F1B4A162C006D6114 /* main.m in Sources */,
 				A494498B1B4A1B48006D6114 /* WebserviceTK.m in Sources */,
